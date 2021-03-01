@@ -64,7 +64,11 @@ export default () => {
         Direitos de imagem : Netflix, Disney e Amazon <br/>
         Dados pegos do site Themoviedb.org <br/>
       </footer>  
-   
+      {movieList.length <= 0 &&
+        <div className="loading">
+          <img src="https://godoydev.com.br/wp-content/uploads/2021/02/logo.png" alt="Carregando"/>
+        </div>
+    }
     </div>
   );
 }

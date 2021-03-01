@@ -2,10 +2,8 @@ const API_KEY = 'f7e64b9bc6f2b415551c4b1256deb69c';
 const API_BASE = 'https://api.themoviedb.org/3';
 
 
-const basicFecth = async (endpoint) => {
-    const req = await fetch(`${API_BASE}${endpoint}`);
-    const json = await req.json();
-    return json;
+const basicFecth = async (endpoint) =>{
+    return (await fetch(`${API_BASE}${endpoint}`)).json();
 }
 
 export default {
